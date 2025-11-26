@@ -1,0 +1,13 @@
+diff --git a/replications/remotewrite/writer.go b/replications/remotewrite/writer.go
+index ae1832a..75a7db6 100644
+--- a/replications/remotewrite/writer.go
++++ b/replications/remotewrite/writer.go
+@@ -188,7 +188,7 @@ func normalizeResponse(r *http.Response, err error) (*http.Response, string, boo
+ 		return &http.Response{}, errMsg, false
+ 	}
+ 
+-	return r, errMsg, true
++	return r, errMsg, false
+ }
+ 
+ func errorIsTimeout(err error) bool {
